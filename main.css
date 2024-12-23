@@ -1,0 +1,277 @@
+A:link { 
+  color: rgb(23, 126, 196); /* Цвет непосещенных ссылок */
+  }
+  A:visited { 
+  color: rgb(255, 255, 255); /* Цвет посещенных ссылок */
+  }
+   A:hover { 
+  color: rgb(230, 158, 50); /* Цвет ссылок при наведении на них курсора мыши */
+   }
+   body { 
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "nav article"
+      "footer footer";
+    grid-template-rows: 70px 2fr;
+    grid-template-columns: 25% 7fr;
+    grid-gap: 5px;
+    height: 100vh;
+    margin: 0;
+    background-image: url(phonn.png);
+  }
+  
+  header, footer, article, nav, div {
+    padding: 20px;
+    background: rgb(156, 158, 46);
+  }
+#pageHeader {
+  grid-area: header;
+  opacity: .9;
+}
+#pageFooter {
+  grid-area: footer;
+  opacity: .9;
+  height:40px ;
+}
+#mainArticle { 
+  grid-area: article;   
+  opacity: .9;   
+  }
+#mainNav { 
+  grid-area: nav; 
+  opacity: .9;
+  padding: 0 10px; /* Отступы вокруг текста */
+  float: left; 
+  }
+  @media all and (max-width: 1200px) {
+    body { 
+        grid-template-areas:
+            "header header"
+            "nav article"
+            "footer footer";
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto auto;
+    }
+}
+
+@media all and (max-width: 768px) {
+    body { 
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+    
+    #mainNav {
+        padding-left:5px; 
+        padding-right:5px; 
+        float:none; 
+        text-align:center;
+    }
+
+    .media {
+        font-size: smaller; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 10px;
+  }
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+  }
+  .grid-item {
+    background:  #f2f2f2;
+    border: 1px solid #ffffff; /* Граница ячеек */
+    padding: 10px;
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  .media{
+    width: 180px; /* Ширина меню */
+  list-style: none; /* Для списка убираем маркеры */
+  margin: 0; /* Нет отступов вокруг */
+  padding: 0; /* Убираем поля вокруг текста */
+  font-family: Arial, sans-serif; /* Рубленый шрифт для текста меню */
+  font-size: 5pt; /* Размер названий в пункте меню */
+  }
+  li ul {
+  position: absolute; /* Подменю позиционируются абсолютно */
+  display: none; /* Скрываем подменю */
+  left: 160px;
+  top: 137px;
+  margin-left: 165px; /* Сдвигаем подменю вправо */
+  margin-top: -2em; /* Сдвигаем подменю вверх */
+  }
+  li a {
+  display: block; /* Ссылка как блочный элемент */
+  padding: 3px; /* Поля вокруг надписи */
+  text-decoration: none; /* Подчеркивание у ссылок убираем */
+  width:150px ;
+  }
+  li a:hover {
+  color: #ffe; /* Цвет текста активного пункта */
+  background-color: #130997; /* Цвет фона активного пункта */
+  }
+  li:hover ul {
+  display: block; /* При выделении пункта курсором мыши отображается
+  подменю */
+  }
+  h1{
+    margin: 0px;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #d44059;
+}
+ul{
+  list-style: none;
+ }
+ .signup-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-group {
+  grid-column: span 1; 
+}
+
+button {
+  grid-column: span 1; 
+  padding: 2px;
+  background-color:rgb(7, 156, 64); 
+  color: white; 
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:rgb(38, 204, 87); 
+}
+p {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+}
+h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:rgb(104, 112, 28);
+}
+a{
+  font-size: 17px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 1.4px;
+}
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #0051ff;
+  color: white;
+  padding: 1px 2px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.scroll-to-top:hover {
+  background-color:  #ff0099;
+}
+
+ /*?  ГОРИЗОНТАЛЬНОЕ МЕНЮ */
+ .horizontal-menu {
+  display: flex; /* Используем flexbox для горизонтального расположения элементов */
+  padding: 10px 0; /* Отступы сверху и снизу */
+  border-radius: 12px; /* Скругление углов меню */
+  color: #fff; /* Цвет текста */
+  width: 985px; /* Ширина меню */
+  transition: height 0.3s ease; /* Плавный переход для изменения высоты */
+  background: linear-gradient(to bottom, rgb(0, 128, 255), rgb(255, 183, 0)), url('background-image.jpg'); /* Фоновый градиент и изображение */
+  position: relative; /* Относительное позиционирование для вложенных элементов */
+  height: 30px; /* Высота меню */
+  overflow: visible; /* Видимость переполненных элементов */
+  }
+
+  /*?  СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО ГР МЕНЮ */
+.horizontal-menu ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0; /* Убираем внешние отступы */
+  display: flex; /* Используем flexbox для расположения элементов списка */
+  height: 100%; /* Высота списка равна высоте меню */
+  margin-left: 25%; /* Отступ слева для выравнивания */
+  }
+.horizontal-menu ul li:first-child a {
+  margin-left: 0px; /* Отступ слева для первого элемента списка */
+  }
+.horizontal-menu li {
+  position: relative; /* Относительное позиционирование для вложенных элементов */
+  display: flex; /* Используем flexbox для выравнивания элементов */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  }
+.horizontal-menu a {
+  color: #ffffff; /* Цвет ссылок */
+  text-decoration: none; /* Убираем подчеркивание у ссылок */
+  padding: 10px 25px; /* Внутренние отступы для ссылок */
+  display: block; /* Ссылки занимают всю область элемента списка */
+  }
+.horizontal-menu .dropdown-content {
+  display: none; /* Скрываем выпадающее меню по умолчанию */
+  position: absolute; /* Абсолютное позиционирование для выпадающего меню */
+  top: -2px; /* Положение сверху */
+  left: 100%; /* Положение слева от родительского элемента */
+  background-color: rgba(0, 255, 55, 0.446); /* Фоновый цвет выпадающего меню */
+  z-index: 1; /* Устанавливаем уровень наложения */
+  border-radius: 5px; /* Скругление углов выпадающего меню */
+  background: linear-gradient(to bottom, rgba(0, 47, 255, 0.8), rgb(212, 0, 255)), url('background-image.jpg'); /* Фоновый градиент и изображение */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Плавные переходы для трансформации и прозрачности */
+  transform: translateX(10px); /* Сдвиг вправо для эффекта появления */
+  opacity: 0; /* Начальная прозрачность */
+  white-space: nowrap; /* Запрет на перенос строк */
+  min-width: fit-content; /* Минимальная ширина по содержимому */
+  }
+.horizontal-menu .dropdown:hover .dropdown-content {
+  display: block; /* Показываем выпадающее меню при наведении */
+  transform: translateX(0); /* Убираем сдвиг */
+  opacity: 1; /* Устанавливаем полную непрозрачность */
+  }
+.horizontal-menu .dropdown-content a {
+  display: inline-block; /* Ссылки в выпадающем меню располагаются в строку */
+  padding: 10px; /* Внутренние отступы для ссылок */
+  text-decoration: none; /* Убираем подчеркивание у ссылок */
+  color: rgb(255, 255, 255) !important; /* Цвет ссылок с приоритетом */
+  }
+.horizontal-menu .dropdown-content a:hover {
+  background-color: rgba(173, 173, 173, 0.446); /* Фоновый цвет при наведении на ссылку */
+  }
+.horizontal-menu .dropdown:hover ~ li:last-child {
+  transition: margin-left 0.3s ease; /* Плавный переход для изменения отступа */
+  margin-left: calc(100% - 45%); /* Увеличенное расстояние сдвига */
+  }
+.horizontal-menu li:last-child {
+  transition: margin-left 0.3s ease; /* Плавный переход для изменения отступа */
+  }
+.horizontal-menu li:not(.dropdown):hover ~ li:last-child {
+  margin-left: 0px; /* Сброс отступа при наведении на элемент списка */
+  }
