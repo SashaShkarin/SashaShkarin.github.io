@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>магазин автозапчастей»</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="logobb.png" type="image/x-icon">
+    <link rel="stylesheet" media="screen and (color)" href="main.css">
+</head>
+<body>
+    <header id="pageHeader"><h1>магазтн автозапчастей»</header>
+    <article id="mainArticle">
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="order.html">запчасти</a></li>
+                <li class="dropdown">
+                    <a href="#">Таблицы</a>
+                    <div class="dropdown-content">
+                        <a href="clients.html">Клиенты</a>
+                        <a href="haircuts.html">Автомобили</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <form action="/signup" method="POST" class="signup-form">
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <label for="sur_name">код товара</label>
+                    <input type="text" id="sur_name" name="sur_name" placeholder="код">
+                </div>
+                <div class="form-group">
+                    <label for="first_name">название</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="название">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">автомобили</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="автомобили">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Введите свою почту">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Введите свой телефон">
+                </div>
+                <div class="form-group">
+                    <label for="haircuts">Выбрать класс авто</label>
+                    <select id="haircuts" name="haircuts">
+                        <option>Джип</option>
+                        <option>Седан</option>
+                        <option>Универсал</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>Выбрать дату
+                        <input type="date" name="haircut"> 
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="wishes">Пожелания:</label><br>
+                    <textarea id="wishes"></textarea>
+                </div>
+                <button type="submit">запчасти</button>
+            </form>
+        </section>
+    </article>
+    <nav id="mainNav">
+        <ul>
+            <li> <a href="index.html"> Главная</a></li>
+            <li><a>Таблицы</a>
+            <ul class="media">
+                <li><a href="clients.html">Клиенты</a>
+            <li><a href="haircuts.html">Автомобили</a></li>
+               </ul>
+               </li>
+            <li><a href = "order.html">запчасти</a> </li>
+            </ul>
+    </nav>
+
+    </div>
+    <footer id="pageFooter">
+        <p><i>@ Шкарин А.А<p><i>
+            <a href="#top" class="scroll-to-top">Наверх</a>
+    </footer>
+</body>
+</html>
